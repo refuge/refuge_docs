@@ -1,0 +1,5 @@
+*.swp
+*.dump
+edoc-info
+.DS_Store
+_build
