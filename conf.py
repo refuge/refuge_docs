@@ -44,7 +44,7 @@ source_suffix = '.rst'
 #source_encoding = 'utf-8-sig'
 
 # The master toctree document.
-master_doc = 'index'
+master_doc = 'toctree'
 
 # General information about the project.
 project = u'refuge docs'
@@ -220,7 +220,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'refugedocs', u'refuge docs Documentation',
+    ('toctree', 'refugedocs', u'refuge docs Documentation',
      [u'refuge.io'], 1)
 ]
 
@@ -234,7 +234,7 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'refugedocs', u'refuge docs Documentation',
+  ('toctree', 'refugedocs', u'refuge docs Documentation',
    u'refuge.io', 'refugedocs', 'One line description of project.',
    'Miscellaneous'),
 ]
