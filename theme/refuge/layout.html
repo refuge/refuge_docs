@@ -2,7 +2,6 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="google-site-verification" content="UxV66EKuPe87dgnH1sbrldrx6VsoWMrx5NjwkgUFxXI" />
     <title>{{ meta['title'] if meta and meta['title'] else title }} - Docker Documentation</title>
     <meta name="description" content="{{ meta['description'] if meta }}" />
     <meta name="keywords" content="{{ meta['keywords'] if meta }}" />
@@ -46,7 +45,7 @@
     {%- for scriptfile in script_files if scriptfile != '_static/jquery.js' %}
     <script type="text/javascript" src="{{ pathto(scriptfile, 1) }}"></script>
     {%- endfor %}
-    <link rel="shortcut icon" href="{{ pathto('_static/favicon.png', 1) }}"/>
+    <link rel="shortcut icon" href="{{ pathto('_static/favicon.ico', 1) }}"/>
     {%- block extrahead %}{% endblock %}
 
 </head>

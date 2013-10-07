@@ -44,7 +44,7 @@ body {
 .social .twitter,
 .social .github,
 .social .googleplus {
-  background: url("/img/footer-links.png") no-repeat transparent;
+  background: url("../img/footer-links.png") no-repeat transparent;
   display: inline-block;
   height: 35px;
   overflow: hidden;
