@@ -9,22 +9,10 @@
 :description: An overview of the Docker Documentation
 :keywords: containers, lxc, concepts, explanation
 
-.. image:: _static/img/refuge-logo-horizontal.png
+.. image:: img/refuge-logo-horizontal.png
 
 Welcome to refuge docs's documentation!
 =======================================
 
-Contents:
 
-.. toctree::
-   :maxdepth: 2
-
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
 

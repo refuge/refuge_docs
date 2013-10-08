@@ -19,10 +19,7 @@
     {%- set css_files = css_files + ['_static/pygments.css'] %}
     {%- set css_files = css_files + ['_static/css/main.css'] %}
 
-    {%- set script_files =
-    ['//code.jquery.com/jquery-1.10.1.min.js']
-    + ['//fonts.googleapis.com/css?family=Cabin:400,700,400italic']
-    %}
+
 
     {#
         This part is hopefully complex because things like |cut '/index/' are not available in spinx jinja
@@ -42,9 +39,6 @@
     <link rel="stylesheet" href="{{ pathto(cssfile, 1) }}" type="text/css" />
     {%- endfor %}
 
-    {%- for scriptfile in script_files if scriptfile != '_static/jquery.js' %}
-    <script type="text/javascript" src="{{ pathto(scriptfile, 1) }}"></script>
-    {%- endfor %}
     <link rel="shortcut icon" href="{{ pathto('_static/favicon.ico', 1) }}"/>
     {%- block extrahead %}{% endblock %}
 
@@ -86,8 +80,10 @@
      ================================================== -->
     <div class="row main-row">
 
-        <div class="col-xs-6 col-sm-6 col-md-4">
+        <div class="col-xs-6 col-sm-6 col-md-4 sidebar bs-docs-sidebar">
+          <div class>
             <h3>DOCUMENTATION</h3>
+          </div>
 
             {{ toctree(collapse=False, maxdepth=3) }}
 	    <form>

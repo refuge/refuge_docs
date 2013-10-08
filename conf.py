@@ -23,12 +23,6 @@ import sys, os
 # If your documentation needs a minimal Sphinx version, state it here.
 #needs_sphinx = '1.0'
 
-html_additional_pages = {
-    'concepts/containers': 'redirect_home.html',
-    'concepts/introduction': 'redirect_home.html',
-    'builder/basics': 'redirect_build.html',
-    }
-
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
@@ -42,6 +36,8 @@ source_suffix = '.rst'
 
 # The encoding of source files.
 #source_encoding = 'utf-8-sig'
+
+html_add_permalinks = u'¶'
 
 # The master toctree document.
 master_doc = 'toctree'
@@ -127,7 +123,7 @@ html_theme_path = ['theme']
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static']
+_html_static_path = ['static_files']
 
 # If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
 # using the given strftime format.

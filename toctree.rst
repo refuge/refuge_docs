@@ -10,4 +10,6 @@ This documentation has the following resources:
 .. toctree::
    :maxdepth: 1
 
+   Introduction <index>
    contributing/index
+   faq

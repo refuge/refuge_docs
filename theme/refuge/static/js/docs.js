@@ -1,29 +1,11 @@
 
-// This script should be included at the END of the document. 
+// This script should be included at the END of the document.
 // For the fastest loading it does not inlude $(document).ready()
 
 // This Document contains a few helper functions for the documentation to display the current version,
 // collapse and expand the menu etc.
 
 
-// Function to make the sticky header possible
-function shiftWindow() { 
-    scrollBy(0, -70);
-    console.log("window shifted")
-}
-
-window.addEventListener("hashchange", shiftWindow);
-
-function loadShift() {
-    if (window.location.hash) {
-        console.log("window has hash");
-        shiftWindow();
-    }
-}
-
-$(window).load(function() {
-    loadShift();
-});
 
 $(function(){
 
@@ -33,14 +15,11 @@ $(function(){
     // define an array to which all opened items should be added
     var openmenus = [];
 
-    var elements = $('.toctree-l2');
-    // for (var i = 0; i < elements.length; i += 1) { var current = $(elements[i]); current.children('ul').hide();}
-
-
     // set initial collapsed state
     var elements = $('.toctree-l1');
     for (var i = 0; i < elements.length; i += 1) {
         var current = $(elements[i]);
+        console.log(current);
         if (current.hasClass('current')) {
             current.addClass('open');
             currentlink = current.children('a')[0].href;
@@ -53,23 +32,18 @@ $(function(){
         }
     }
 
-    if (doc_version == "") {
-        $('.version-flyer ul').html('<li class="alternative active-slug"><a href="" title="Switch to local">Local</a></li>');
-    }
-
-    // mark the active documentation in the version widget
-    $(".version-flyer a:contains('" + doc_version + "')").parent().addClass('active-slug');
+    console.log(openmenus);
 
 
     // attached handler on click
     // Do not attach to first element or last (intro, faq) so that
     // first and last link directly instead of accordian
-    $('.sidebar > ul > li > a').not(':last').not(':first').click(function(){
+    $('.sidebar > ul > li > a').not(':last').not(':first').click(function(e){
 
+        e.preventDefault();
         var index = $.inArray(this.href, openmenus)
 
         if (index > -1) {
-            console.log(index);
             openmenus.splice(index, 1);
 
 
