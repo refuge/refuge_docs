@@ -9,14 +9,13 @@ http://docs.refuge.io
 - [Pip](https://pypi.python.org/pypi/pip) 
 - [SPHINX](http://sphinx-doc.org/)
 
-How to contributre?
--------------------
+## How to contributre?
 
-- Install sphinx:
+### Install sphinx:
 
     $ pip install sphinx
 
-- Compile the documentation:
+### Compile the documentation:
 
     $ make htmk and open the generated documentation in the ` _build`
 folder.
