@@ -37,7 +37,7 @@ source_suffix = '.rst'
 # The encoding of source files.
 #source_encoding = 'utf-8-sig'
 
-html_add_permalinks = u'¶'
+#html_add_permalinks = u''
 
 # The master toctree document.
 master_doc = 'toctree'
