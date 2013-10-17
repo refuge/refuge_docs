@@ -45,7 +45,6 @@ clean:
 github: html
 	cp CNAME $(BUILDDIR)/html/
 	cp .nojekyll $(BUILDDIR)/html/
-
 	ghp-import -p $(BUILDDIR)/html
 
 html:
