@@ -41,6 +41,13 @@ help:
 clean:
 	-rm -rf $(BUILDDIR)/*
 
+
+github: html
+	cp CNAME $(BUILDDIR)/html/
+	cp .nojekyll $(BUILDDIR)/html/
+
+	ghp-import -p $(BUILDDIR)/html
+
 html:
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
 	@echo
